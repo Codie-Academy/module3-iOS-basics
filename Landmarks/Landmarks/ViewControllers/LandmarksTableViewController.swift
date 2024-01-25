@@ -96,14 +96,19 @@ class LandmarksTableViewController: UITableViewController {
         performSegue(withIdentifier: "ToLandmarkDetailsScreen", sender: landmarks[indexPath.row])
     }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+
+        if segue.identifier == "ToLandmarkDetailsScreen" {
+            if let landmark = sender as? Landmark,
+               let landmarkDetailsVC = segue.destination as? LandmarkDetailsViewController {
+                landmarkDetailsVC.landmark = landmark
+            }
+        }
     }
-    */
 
 }

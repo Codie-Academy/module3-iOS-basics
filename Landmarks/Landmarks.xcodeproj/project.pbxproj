@@ -18,6 +18,7 @@
 		34E268672B6178C8004380DA /* LandmarksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E268662B6178C8004380DA /* LandmarksTableViewController.swift */; };
 		34E268692B6179AA004380DA /* LandmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E268682B6179AA004380DA /* LandmarkTableViewCell.swift */; };
 		34E2686B2B6179BF004380DA /* LandmarkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E2686A2B6179BF004380DA /* LandmarkTableViewCell.xib */; };
+		34E2686D2B618303004380DA /* LandmarkDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E2686C2B618303004380DA /* LandmarkDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		34E268662B6178C8004380DA /* LandmarksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksTableViewController.swift; sourceTree = "<group>"; };
 		34E268682B6179AA004380DA /* LandmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkTableViewCell.swift; sourceTree = "<group>"; };
 		34E2686A2B6179BF004380DA /* LandmarkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandmarkTableViewCell.xib; sourceTree = "<group>"; };
+		34E2686C2B618303004380DA /* LandmarkDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				34E268662B6178C8004380DA /* LandmarksTableViewController.swift */,
+				34E2686C2B618303004380DA /* LandmarkDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				34E268692B6179AA004380DA /* LandmarkTableViewCell.swift in Sources */,
 				34E268672B6178C8004380DA /* LandmarksTableViewController.swift in Sources */,
 				34E268652B616BCC004380DA /* ModelData.swift in Sources */,
+				34E2686D2B618303004380DA /* LandmarkDetailsViewController.swift in Sources */,
 				34E268492B61661B004380DA /* SceneDelegate.swift in Sources */,
 				34E268612B6169EC004380DA /* Landmark.swift in Sources */,
 			);
