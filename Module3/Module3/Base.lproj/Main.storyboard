@@ -16,14 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aj9-ei-g8q" customClass="CustomView" customModule="Module3" customModuleProvider="target">
-                                <rect key="frame" x="22" y="59" width="355" height="742"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aj9-ei-g8q" customClass="CustomView" customModule="Module3" customModuleProvider="target">
+                                <rect key="frame" x="16" y="75" width="361" height="727"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aj9-ei-g8q" secondAttribute="trailing" constant="16" id="4nX-N6-DaT"/>
+                            <constraint firstItem="aj9-ei-g8q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="HFo-e6-Sv1"/>
+                            <constraint firstItem="aj9-ei-g8q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="cmZ-Wj-GjZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aj9-ei-g8q" secondAttribute="bottom" constant="16" id="hxr-1Z-2CZ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

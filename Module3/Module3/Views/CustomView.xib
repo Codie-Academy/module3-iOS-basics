@@ -18,20 +18,30 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iTf-yJ-HTd">
-                    <rect key="frame" x="49" y="103" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iTf-yJ-HTd">
+                    <rect key="frame" x="16" y="75" width="361" height="128"/>
                     <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="jUc-xc-24F"/>
+                    </constraints>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fSI-Jr-yfl">
-                    <rect key="frame" x="49" y="249" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSI-Jr-yfl">
+                    <rect key="frame" x="16" y="219" width="180.66666666666666" height="583"/>
                     <color key="backgroundColor" systemColor="systemMintColor"/>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fSI-Jr-yfl" secondAttribute="bottom" constant="16" id="Ukl-Pc-zQZ"/>
+                <constraint firstItem="fSI-Jr-yfl" firstAttribute="width" secondItem="iTf-yJ-HTd" secondAttribute="width" multiplier="0.5" id="YaH-F3-dxo"/>
+                <constraint firstItem="fSI-Jr-yfl" firstAttribute="top" secondItem="iTf-yJ-HTd" secondAttribute="bottom" constant="16" id="cAq-V1-orc"/>
+                <constraint firstItem="iTf-yJ-HTd" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="ili-PA-vd3"/>
+                <constraint firstItem="fSI-Jr-yfl" firstAttribute="leading" secondItem="iTf-yJ-HTd" secondAttribute="leading" id="jzQ-vA-zB9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iTf-yJ-HTd" secondAttribute="trailing" constant="16" id="mOI-P0-WzC"/>
+                <constraint firstItem="iTf-yJ-HTd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="zWI-JM-kWZ"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outletCollection property="gestureRecognizers" destination="ZQq-vu-1Nk" appends="YES" id="7br-Qo-kDj"/>
