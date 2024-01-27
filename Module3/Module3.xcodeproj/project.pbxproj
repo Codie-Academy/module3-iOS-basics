@@ -13,6 +13,8 @@
 		3488B0222B5C178D008CF4C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3488B0202B5C178D008CF4C3 /* Main.storyboard */; };
 		3488B0242B5C178E008CF4C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3488B0232B5C178E008CF4C3 /* Assets.xcassets */; };
 		3488B0272B5C178E008CF4C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3488B0252B5C178E008CF4C3 /* LaunchScreen.storyboard */; };
+		34E2687D2B64010F004380DA /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E2687C2B64010F004380DA /* CustomView.swift */; };
+		34E268832B640ACA004380DA /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E268822B640ACA004380DA /* CustomView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		3488B0232B5C178E008CF4C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3488B0262B5C178E008CF4C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3488B0282B5C178E008CF4C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34E2687C2B64010F004380DA /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		34E268822B640ACA004380DA /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		3488B0192B5C178D008CF4C3 /* Module3 */ = {
 			isa = PBXGroup;
 			children = (
+				34E2687B2B6400C5004380DA /* Views */,
 				3488B01A2B5C178D008CF4C3 /* AppDelegate.swift */,
 				3488B01C2B5C178D008CF4C3 /* SceneDelegate.swift */,
 				3488B01E2B5C178D008CF4C3 /* ViewController.swift */,
@@ -65,6 +70,15 @@
 				3488B0282B5C178E008CF4C3 /* Info.plist */,
 			);
 			path = Module3;
+			sourceTree = "<group>";
+		};
+		34E2687B2B6400C5004380DA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				34E2687C2B64010F004380DA /* CustomView.swift */,
+				34E268822B640ACA004380DA /* CustomView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +110,7 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
+				ORGANIZATIONNAME = "Codie Academy";
 				TargetAttributes = {
 					3488B0162B5C178D008CF4C3 = {
 						CreatedOnToolsVersion = 15.2;
@@ -126,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3488B0272B5C178E008CF4C3 /* LaunchScreen.storyboard in Resources */,
+				34E268832B640ACA004380DA /* CustomView.xib in Resources */,
 				3488B0242B5C178E008CF4C3 /* Assets.xcassets in Resources */,
 				3488B0222B5C178D008CF4C3 /* Main.storyboard in Resources */,
 			);
@@ -139,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3488B01F2B5C178D008CF4C3 /* ViewController.swift in Sources */,
+				34E2687D2B64010F004380DA /* CustomView.swift in Sources */,
 				3488B01B2B5C178D008CF4C3 /* AppDelegate.swift in Sources */,
 				3488B01D2B5C178D008CF4C3 /* SceneDelegate.swift in Sources */,
 			);

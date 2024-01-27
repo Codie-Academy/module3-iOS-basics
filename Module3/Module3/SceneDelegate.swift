@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Module3
 //
-//  Created by Dusan Durakovic on 20.1.24..
+//  Created by Codie Academy
 //
 
 import UIKit
