@@ -15,16 +15,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQk-xN-rFU">
+                                <rect key="frame" x="16" y="75" width="361" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wgg-vW-d5u">
+                                <rect key="frame" x="16" y="124" width="361" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Et-23-RKW"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="RcQ-b0-FsS">
+                                <rect key="frame" x="16" y="182" width="361" height="200"/>
+                                <color key="backgroundColor" red="0.41960784309999999" green="0.40000000000000002" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="sUx-Zn-agE"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Placeholder" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ll0-Xo-lcW">
+                                <rect key="frame" x="16" y="398" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RcQ-b0-FsS" firstAttribute="trailing" secondItem="Wgg-vW-d5u" secondAttribute="trailing" id="3gV-0i-BtE"/>
+                            <constraint firstItem="Ll0-Xo-lcW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4xD-ke-4pA"/>
+                            <constraint firstItem="RcQ-b0-FsS" firstAttribute="leading" secondItem="Wgg-vW-d5u" secondAttribute="leading" id="8K3-kL-Aow"/>
+                            <constraint firstItem="Wgg-vW-d5u" firstAttribute="top" secondItem="qQk-xN-rFU" secondAttribute="bottom" constant="28" id="Jml-0V-JXv"/>
+                            <constraint firstItem="Wgg-vW-d5u" firstAttribute="trailing" secondItem="qQk-xN-rFU" secondAttribute="trailing" id="QPo-F9-Yh8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qQk-xN-rFU" secondAttribute="trailing" constant="16" id="SOB-36-G1K"/>
+                            <constraint firstItem="qQk-xN-rFU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TGI-hA-Q2U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ll0-Xo-lcW" secondAttribute="trailing" constant="16" id="a00-Zg-4ri"/>
+                            <constraint firstItem="Wgg-vW-d5u" firstAttribute="leading" secondItem="qQk-xN-rFU" secondAttribute="leading" id="aGy-G2-FgW"/>
+                            <constraint firstItem="RcQ-b0-FsS" firstAttribute="top" secondItem="Wgg-vW-d5u" secondAttribute="bottom" constant="23" id="ew9-KS-eSO"/>
+                            <constraint firstItem="Ll0-Xo-lcW" firstAttribute="top" secondItem="RcQ-b0-FsS" secondAttribute="bottom" constant="16" id="ggv-N9-lAg"/>
+                            <constraint firstItem="qQk-xN-rFU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="wJU-hY-D4i"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="Wgg-vW-d5u" id="at5-tp-Rzd"/>
+                        <outlet property="imageView" destination="RcQ-b0-FsS" id="oz2-X5-arR"/>
+                        <outlet property="label" destination="qQk-xN-rFU" id="moN-Qh-ycB"/>
+                        <outlet property="textField" destination="Ll0-Xo-lcW" id="YpM-0j-SZV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="114" y="-36"/>
         </scene>
     </scenes>
     <resources>
+        <image name="logo" width="298" height="130"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
