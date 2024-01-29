@@ -10,7 +10,6 @@ import UIKit
 
 class CustomViewController: UIViewController {
 
-    @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,8 +26,4 @@ class CustomViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-    @IBAction func buttonPressed(_ sender: Any) {
-        label.text = "Codie Academy\nModule 3\nLesson 3\nUIViewController, Storyboards, UIViewController Lifecycle"
-    }
 }

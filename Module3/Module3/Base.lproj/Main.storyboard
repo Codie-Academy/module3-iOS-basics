@@ -15,49 +15,9 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PlD-ag-QBa">
-                                <rect key="frame" x="16" y="383.66666666666669" width="361" height="85"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gj8-O2-BEJ">
-                                        <rect key="frame" x="8" y="8" width="345" height="26"/>
-                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="23"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ocd-qR-7kJ">
-                                        <rect key="frame" x="8" y="42" width="345" height="35"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Press me!"/>
-                                        <connections>
-                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3b0-nZ-qsn"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="Gj8-O2-BEJ" firstAttribute="top" secondItem="PlD-ag-QBa" secondAttribute="top" constant="8" id="FNV-TH-FqV"/>
-                                    <constraint firstItem="Ocd-qR-7kJ" firstAttribute="top" secondItem="Gj8-O2-BEJ" secondAttribute="bottom" constant="8" id="Hxx-P1-O9v"/>
-                                    <constraint firstItem="Gj8-O2-BEJ" firstAttribute="leading" secondItem="PlD-ag-QBa" secondAttribute="leading" constant="8" id="IEn-v1-NrO"/>
-                                    <constraint firstItem="Ocd-qR-7kJ" firstAttribute="trailing" secondItem="Gj8-O2-BEJ" secondAttribute="trailing" id="Q7h-sh-g84"/>
-                                    <constraint firstAttribute="trailing" secondItem="Gj8-O2-BEJ" secondAttribute="trailing" constant="8" id="QvP-zD-MDM"/>
-                                    <constraint firstItem="Ocd-qR-7kJ" firstAttribute="leading" secondItem="Gj8-O2-BEJ" secondAttribute="leading" id="UOu-dW-X7T"/>
-                                    <constraint firstAttribute="bottom" secondItem="Ocd-qR-7kJ" secondAttribute="bottom" constant="8" id="pvo-mL-AbK"/>
-                                </constraints>
-                            </view>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="PlD-ag-QBa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2qJ-zY-QCL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PlD-ag-QBa" secondAttribute="trailing" constant="16" id="gYM-cV-WDL"/>
-                            <constraint firstItem="PlD-ag-QBa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mNj-AE-JnZ"/>
-                            <constraint firstItem="PlD-ag-QBa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oi3-Rv-bIh"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="label" destination="Gj8-O2-BEJ" id="Nao-BW-zHX"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
