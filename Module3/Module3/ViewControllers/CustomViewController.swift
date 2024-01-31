@@ -15,6 +15,7 @@ class CustomViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var textView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class CustomViewController: UIViewController {
         setupButton()
         setupImageView()
         setupTextField()
+        setupTextView()
     }
     
 
@@ -68,6 +70,15 @@ class CustomViewController: UIViewController {
     private func setupTextField() {
         textField.delegate = self
     }
+
+    func setupTextView() {
+        textView.delegate = self
+    }
+
+    // Dismiss keyboard when user taps outside the UITextView
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
 }
 
 extension CustomViewController: UITextFieldDelegate {
@@ -81,5 +92,12 @@ extension CustomViewController: UITextFieldDelegate {
         // Dismiss the keyboard
         textField.resignFirstResponder()
         return true
+    }
+}
+
+extension CustomViewController: UITextViewDelegate {
+    // Implement UITextViewDelegate method to respond to text changes
+    func textViewDidChange(_ textView: UITextView) {
+        print("Text changed: \(textView.text ?? "")")
     }
 }
