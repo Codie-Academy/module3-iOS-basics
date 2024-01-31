@@ -14,6 +14,7 @@ class CustomViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var stackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +38,14 @@ class CustomViewController: UIViewController {
     */
 
     @IBAction func buttonTapped(_ sender: Any) {
-        print("Button Tapped")
+        // Create new label
+        let newLabel = UILabel()
+        newLabel.text = "New Label"
+
+        // Add the label to the stack view
+        stackView.addArrangedSubview(newLabel)
     }
-    
+
     private func setupLabel() {
         label.text = "Hello, students!"
         label.font = UIFont.systemFont(ofSize: 14)
