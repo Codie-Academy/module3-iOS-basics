@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UcC-H5-fyo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3ch-Na-HTl">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Custom View Controller-->
+        <!--Custom-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CustomViewController" customModule="Module3" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rPn-1Y-cth">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6rN-ur-bzs">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1058.6666666666667"/>
@@ -154,6 +154,7 @@
                             <constraint firstItem="6rN-ur-bzs" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="kUI-CD-eJf"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Custom" image="star" catalog="system" selectedImage="star.fill" id="kUW-K8-i0s"/>
                     <connections>
                         <outlet property="button" destination="Wgg-vW-d5u" id="at5-tp-Rzd"/>
                         <outlet property="imageView" destination="RcQ-b0-FsS" id="oz2-X5-arR"/>
@@ -165,9 +166,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="113.74045801526717" y="-36.619718309859159"/>
+            <point key="canvasLocation" x="2654" y="135"/>
         </scene>
-        <!--Custom Table View Controller-->
+        <!--Table-->
         <scene sceneID="RO4-nX-mz9">
             <objects>
                 <tableViewController id="UcC-H5-fyo" customClass="CustomTableViewController" customModule="Module3" customModuleProvider="target" sceneMemberID="viewController">
@@ -180,15 +181,39 @@
                             <outlet property="delegate" destination="UcC-H5-fyo" id="CDU-rS-6Nz"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Table" image="tablecells" catalog="system" selectedImage="tablecells.fill" id="lMO-kP-BLK"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kWD-Xu-Vmc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="986" y="-27"/>
+            <point key="canvasLocation" x="1908" y="-344"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="scK-pq-mre">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3ch-Na-HTl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GWm-Bc-j67">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="UcC-H5-fyo" kind="relationship" relationship="viewControllers" id="eso-gO-RQj"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="pDs-fK-jgX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a7P-km-Rmg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="985.49618320610682" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <resources>
         <image name="background" width="1920" height="1006"/>
         <image name="logo" width="298" height="130"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="tablecells" catalog="system" width="128" height="93"/>
+        <image name="tablecells.fill" catalog="system" width="128" height="93"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
