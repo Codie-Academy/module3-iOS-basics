@@ -56,7 +56,7 @@ class CustomTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        print("Selected row \(indexPath.row + 1)")
+        performSegue(withIdentifier: "ToDetailsViewController", sender: indexPath)
     }
 
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -114,14 +114,17 @@ class CustomTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "ToDetailsViewController" {
+            if let destinationVC = segue.destination as? DetailsViewController,
+               let indexPath = sender as? IndexPath {
+                destinationVC.number = data[indexPath.section][indexPath.row]
+            }
+        }
     }
-    */
-
 }

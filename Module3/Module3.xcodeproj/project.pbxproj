@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		340EFB812B729E3D009B5AD9 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340EFB802B729E3D009B5AD9 /* DetailsViewController.swift */; };
 		3488B01B2B5C178D008CF4C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3488B01A2B5C178D008CF4C3 /* AppDelegate.swift */; };
 		3488B01D2B5C178D008CF4C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3488B01C2B5C178D008CF4C3 /* SceneDelegate.swift */; };
 		3488B0222B5C178D008CF4C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3488B0202B5C178D008CF4C3 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		340EFB802B729E3D009B5AD9 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		3488B0172B5C178D008CF4C3 /* Module3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Module3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3488B01A2B5C178D008CF4C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3488B01C2B5C178D008CF4C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			children = (
 				34F4F6952B66AB5F0071F614 /* CustomViewController.swift */,
 				34A77E542B6D419F00C4ACA1 /* CustomTableViewController.swift */,
+				340EFB802B729E3D009B5AD9 /* DetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				34E2687D2B64010F004380DA /* CustomView.swift in Sources */,
 				34F4F6962B66AB5F0071F614 /* CustomViewController.swift in Sources */,
 				3488B01B2B5C178D008CF4C3 /* AppDelegate.swift in Sources */,
+				340EFB812B729E3D009B5AD9 /* DetailsViewController.swift in Sources */,
 				3488B01D2B5C178D008CF4C3 /* SceneDelegate.swift in Sources */,
 				34A77E552B6D419F00C4ACA1 /* CustomTableViewController.swift in Sources */,
 			);
