@@ -9,6 +9,15 @@ import UIKit
 
 class LandmarksTableViewController: UITableViewController {
 
+    enum Constants {
+        enum AccessibilityIdentifiers {
+            static let tableView = "tableView"
+            static func accessibilityIdentifierForCellAtRow(_ row: Int) -> String {
+                return "Cell\(row + 1)"
+            }
+        }
+    }
+
     var landmarks = ModelData.landmarks
 
     override func viewDidLoad() {
@@ -21,12 +30,17 @@ class LandmarksTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
 
         setupTableView()
+        setupAccessibilityIdentifiers()
     }
 
     private func setupTableView() {
         tableView.register(UINib(nibName: "LandmarkTableViewCell", bundle: .main), forCellReuseIdentifier: LandmarkTableViewCell.reuseIdentifier)
     }
 
+    private func setupAccessibilityIdentifiers() {
+        tableView.accessibilityIdentifier = Constants.AccessibilityIdentifiers.tableView
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -43,6 +57,7 @@ class LandmarksTableViewController: UITableViewController {
             let landmark = landmarks[indexPath.row]
             cell.landmarkPhoto.image = UIImage(named: landmark.imageName)
             cell.nameLabel.text = landmark.name
+            cell.accessibilityIdentifier = Constants.AccessibilityIdentifiers.accessibilityIdentifierForCellAtRow(indexPath.row)
 
             return cell
         } else {

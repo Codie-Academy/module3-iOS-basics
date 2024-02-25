@@ -38,4 +38,26 @@ final class LandmarksUITests: XCTestCase {
             }
         }
     }
+
+    func testLandmarksViewController() {
+        let app = XCUIApplication()
+        app.launch()
+
+        XCTAssertTrue(app.tables[LandmarksTableViewController.Constants.AccessibilityIdentifiers.tableView].exists)
+    }
+
+    func testTransitionToDetailsScreen() {
+        let app = XCUIApplication()
+        app.launch()
+        app.tables.cells[LandmarksTableViewController.Constants.AccessibilityIdentifiers.accessibilityIdentifierForCellAtRow(0)].tap()
+
+        XCTAssertTrue(app.staticTexts[LandmarkDetailsViewController.Constants.AccessibilityIdentifiers.nameLabel].exists)
+        XCTAssertTrue(app.staticTexts[LandmarkDetailsViewController.Constants.AccessibilityIdentifiers.imageAuthorLabel].exists)
+        XCTAssertTrue(app.staticTexts[LandmarkDetailsViewController.Constants.AccessibilityIdentifiers.aboutLabel].exists)
+        XCTAssertTrue(app.images[LandmarkDetailsViewController.Constants.AccessibilityIdentifiers.landmarkImage].exists)
+
+        XCTAssertEqual(app.staticTexts[LandmarkDetailsViewController.Constants.AccessibilityIdentifiers.nameLabel].label, TestingConstants.FirstLandmark.name)
+        XCTAssertEqual(app.staticTexts[LandmarkDetailsViewController.Constants.AccessibilityIdentifiers.imageAuthorLabel].label, TestingConstants.FirstLandmark.imageAuthor)
+        XCTAssertEqual(app.staticTexts[LandmarkDetailsViewController.Constants.AccessibilityIdentifiers.aboutLabel].label, TestingConstants.FirstLandmark.about)
+    }
 }

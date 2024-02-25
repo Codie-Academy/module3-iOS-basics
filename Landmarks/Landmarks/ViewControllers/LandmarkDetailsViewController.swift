@@ -8,7 +8,15 @@
 import UIKit
 
 class LandmarkDetailsViewController: UIViewController {
-
+    enum Constants {
+        enum AccessibilityIdentifiers {
+            static let nameLabel = "nameLabel"
+            static let landmarkImage = "landmarkImage"
+            static let imageAuthorLabel = "imageAuthorLabel"
+            static let aboutLabel = "aboutLabel"
+        }
+    }
+    
     var landmark: Landmark!
 
     @IBOutlet weak var nameLabel: UILabel!
@@ -21,6 +29,7 @@ class LandmarkDetailsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         displayData()
+        setAccessibilityIdentifiers()
     }
     
     private func displayData() {
@@ -30,6 +39,13 @@ class LandmarkDetailsViewController: UIViewController {
         landmarkImage.image = UIImage(named: landmark.imageName)
         imageAuthorLabel.text = landmark.imageAuthor
         aboutLabel.text = landmark.about
+    }
+
+    private func setAccessibilityIdentifiers() {
+        nameLabel.accessibilityIdentifier = Constants.AccessibilityIdentifiers.nameLabel
+        landmarkImage.accessibilityIdentifier = Constants.AccessibilityIdentifiers.landmarkImage
+        imageAuthorLabel.accessibilityIdentifier = Constants.AccessibilityIdentifiers.imageAuthorLabel
+        aboutLabel.accessibilityIdentifier = Constants.AccessibilityIdentifiers.aboutLabel
     }
 
     /*
