@@ -2,18 +2,18 @@
 //  LandmarkTableViewCell.swift
 //  Landmarks
 //
-//  Created by Dusan Durakovic on 24.1.24..
+//  Created by Codie Academy on 25.2.24..
 //
 
 import UIKit
 
 class LandmarkTableViewCell: UITableViewCell {
 
+    static let reuseIdentifier = "LandmarkTableViewCellReuseIdentifier"
+
     @IBOutlet weak var landmarkPhoto: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    
-    static let reuseIdentifier = "LandmarkTableViewCellReuseIdentifier"
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,5 +24,5 @@ class LandmarkTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

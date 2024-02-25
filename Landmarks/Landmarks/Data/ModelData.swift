@@ -2,7 +2,7 @@
 //  ModelData.swift
 //  Landmarks
 //
-//  Created by Dusan Durakovic on 24.1.24..
+//  Created by Codie Academy on 25.2.24..
 //
 
 import Foundation

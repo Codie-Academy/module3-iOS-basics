@@ -2,7 +2,7 @@
 //  LandmarkDetailsViewController.swift
 //  Landmarks
 //
-//  Created by Dusan Durakovic on 24.1.24..
+//  Created by Codie Academy on 25.2.24..
 //
 
 import UIKit
@@ -15,18 +15,15 @@ class LandmarkDetailsViewController: UIViewController {
     @IBOutlet weak var landmarkImage: UIImageView!
     @IBOutlet weak var imageAuthorLabel: UILabel!
     @IBOutlet weak var aboutLabel: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-
         displayData()
     }
     
-    // MARK: - Setup data
-
-    func displayData() {
+    private func displayData() {
         guard let landmark = landmark else { return }
 
         nameLabel.text = landmark.name

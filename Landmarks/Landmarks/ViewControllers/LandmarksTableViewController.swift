@@ -2,14 +2,14 @@
 //  LandmarksTableViewController.swift
 //  Landmarks
 //
-//  Created by Dusan Durakovic on 24.1.24..
+//  Created by Codie Academy on 25.2.24..
 //
 
 import UIKit
 
 class LandmarksTableViewController: UITableViewController {
 
-    private var landmarks = ModelData.landmarks
+    var landmarks = ModelData.landmarks
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,21 +23,17 @@ class LandmarksTableViewController: UITableViewController {
         setupTableView()
     }
 
-    // MARK: - Setup
-
-    func setupTableView() {
+    private func setupTableView() {
         tableView.register(UINib(nibName: "LandmarkTableViewCell", bundle: .main), forCellReuseIdentifier: LandmarkTableViewCell.reuseIdentifier)
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return landmarks.count
     }
 
@@ -54,56 +50,18 @@ class LandmarksTableViewController: UITableViewController {
         }
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
     // MARK: - Table View Delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        performSegue(withIdentifier: "ToLandmarkDetailsScreen", sender: landmarks[indexPath.row])
+        performSegue(withIdentifier: "ToLandmarkDetailsViewController", sender: landmarks[indexPath.row])
     }
 
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-
-        if segue.identifier == "ToLandmarkDetailsScreen" {
+        if segue.identifier == "ToLandmarkDetailsViewController" {
             if let landmark = sender as? Landmark,
                let landmarkDetailsVC = segue.destination as? LandmarkDetailsViewController {
                 landmarkDetailsVC.landmark = landmark
